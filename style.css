@@ -1,0 +1,218 @@
+:root{
+    --mainPink:#ef7998;
+    --mainWhite:#fff;
+    --mainYellow:rgb(249, 228, 148);
+    --mainBlack:#000;
+    --yellowTrans:rgba(249, 228, 148, 0.5);
+    --mainGrey:rgb(238, 238, 238);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    font-family:cursive;
+    background: #fff;
+    color: #000;
+}
+/* global styles */
+.btn-pink{
+    color: var(--mainPink) !important;
+    border-color: var(--mainPink) !important;
+}
+.btn-black{
+    color: var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+}
+.btn-black:hover{
+    color: var(--mainPink) !important;
+    background-color: var(--mainBlack) !important;
+}
+.btn-pink:hover{
+    color: var(--mainBlack) !important;
+    border-color: var(--mainPink) !important;
+}
+/* nav links */
+.navbar-toggler{
+    outline: none !important;
+}
+.toggler-icon{
+    font-size: 2.5rem;
+    color: #ef7998;
+}
+.nav-link{
+    color: #ef7998;
+    transition: all 1s ease-in-out;
+    font-size:1.5rem ;
+}
+.nav-link:hover{
+    color: black;
+}
+.cart-info__icon{
+    color: black;
+    cursor: pointer;
+}
+.cart-info{
+    border: 0.1rem solid black;
+    color: black;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 1s ;
+}
+.cart-info:hover{
+    background-color: #ef7998;
+    border: #ef7998;
+    color: #fff;
+}
+.cart-info:hover .cart-info__icon{
+    color: #fff;
+}
+.max-height{
+    min-height: calc(100vh - 69.25px);
+    background-image:linear-gradient(var(--yellowTrans), var(--yellowTrans)), url("img/cake.jpg"); 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.banner{
+    color: #fff;
+    margin-top: -4rem;
+}
+.banner-title{
+    color: #ef7998;
+    font-size: 4rem;
+}
+.banner-link{
+    font-size: 1.5rem;
+    color: #000;
+    border: 0.2rem solid #000;
+    transition: all 1s  ;
+}
+.banner-link:hover{
+    background-color: #000;
+    color: #ef7998;
+}
+/* about section */
+.about-image__container{
+    position: relative;
+}
+.about-image__container::before{
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    left: -1.7rem;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem solid rgb(249, 228, 148);
+    z-index: -1;
+    transition: all 1s linear;
+}
+.about-image__container:hover:before{
+    top: 0;
+    left: 0;
+}
+
+/* store */
+.store{
+    background: var(--mainGrey);
+}
+.search-box{
+    background: var(--mainPink);
+    color: var(--mainBlack);
+}
+/* single item */
+.single-item{
+    transition: all 0.3s linear;
+}
+.single-item:hover{
+    box-shadow: 0 10px 15px rgb(0, 0, 0);
+}
+.img-container{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}    
+.store-img{
+    transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img{
+    transform: scale(1.2);
+}
+.store-item-icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--mainBlack);
+    padding: 0.75rem;
+    background: var(--mainYellow);
+    border-top-left-radius: 1rem;
+    transition: all 1s ease-in-out;
+   transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon{
+    transform: translate(0,0);
+}
+.store-item-icon:hover{
+    color: var(--mainPink);
+}
+/* services */
+.services{
+    color: var(--mainWhite);
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("img/cake\ \(2\).jpg")center/cover fixed no-repeat;
+}
+.service-title{
+    letter-spacing: 0.5rem;
+}
+.service-text{
+    word-spacing: 0.5rem;
+}
+/* footer */
+.footer-title{
+    background: var(--mainBlack);
+}
+.footer-contact{
+    background: var(--mainGrey);
+}
+.footer-icon{
+    font-size: 1.5rem;
+    color: var(--mainWhite);
+    transition: all 0.4 ease-in-out;
+}
+.footer-icon:hover{
+    color: var(--mainPink);
+}
+/* cart */
+.cart{
+    position: absolute;
+    min-height: 10rem;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    width: 0;
+    overflow: hidden;
+}
+
+.show-cart{
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+}
+.cart-item-remove{
+    color: var(--mainPink);
+    transition: all 1s ease-in-out;
+}
+.cart-item{
+    transition: all 2s ease-in-out;
+}
+.cart-item-remove:hover{
+    transform: scale(1.1);
+    color: var(--mainBlack);
+}
+.cart-item-price{
+    font-size: 0.8rem;
+}
